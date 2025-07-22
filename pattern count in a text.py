@@ -1,0 +1,13 @@
+# A k-mer is a string of length k. We define Count(Text, Pattern) as the number of times that a k-mer Pattern appears as a substring of Text. 
+# For example, Count(ACAACTATGCATACTATCGGGAACTATCCT,ACTAT)=3
+# Given: {DNA strings}} Text and Pattern.
+# Return: Count(Text, Pattern).
+
+#ba1a
+
+def pattern_count(text,k_mer):
+    count = 0
+    for i in range(0,len(text)-len(k_mer)+1):
+        if text[i:i+len(k_mer)] == k_mer:
+            count += 1
+    return count 
